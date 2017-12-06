@@ -1,5 +1,4 @@
 # wallboard-poc (WIP)
 
-Test d'affichage d'un wallboard avec des widgets chargés par iframe.
+Test d'affichage d'un wallboard avec des web components :stuck_out_tongue:
 
-Pour voir le résultat : https://softeamouest.github.io/wallboard-poc/

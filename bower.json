@@ -1,0 +1,16 @@
+{
+  "name": "wallboard-poc",
+  "homepage": "https://github.com/SofteamOuest/wallboard-poc",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "grid-list": "victorsalaun/grid-list#^1.0.0"
+  }
+}

@@ -8,10 +8,10 @@
 		'http://www.destineo.fr/fr/schedule/result/?schedule%5Bstop_area%5D%5Bautocomplete%5D=Ile+de+Nantes+%28Nantes%29&schedule%5Bstop_area%5D%5Bautocomplete-hidden%5D=stop_area%3ANAN%3ASA%3AIDNA&schedule%5Bfrom_datetime%5D%5Bdate%5D=29%2F11%2F2017&schedule%5Bfrom_datetime%5D%5Btime%5D%5Bhour%5D=12&schedule%5Bfrom_datetime%5D%5Btime%5D%5Bminute%5D=5'
 	];
 
-	const TIMEOUT = 5 * 1000;
-	
-    window.addEventListener("load", start);
-	
+	const TIMEOUT = 10 * 1000;
+
+	window.addEventListener("load", start);
+
 	function start() {
 		new WidgetListService().getList().then(
 			widgetList => new Looper(widgetList, new Wallboard()).start()
@@ -20,7 +20,7 @@
 
 	class WidgetListService {
 		getList() {
-			return new Promise((resolve, _) => resolve(new WidgetList(MOCK_URLS))); 
+			return new Promise((resolve, _) => resolve(new WidgetList(MOCK_URLS)));
 		}
 	}
 
@@ -49,16 +49,16 @@
 				this.view = this.findMainElement();
 				this.cleanUp();
 				resolve();
-			}); 
+			});
 		}
 
 		findMainElement() {
 			var list = document.getElementsByTagName("main");
-			return list[0]; 
+			return list[0];
 		}
 
 		cleanUp() {
-			while (this.view.hasChildNodes()) {  
+			while (this.view.hasChildNodes()) {
 				this.view.removeChild(this.view.firstChild);
 			}
 		}
